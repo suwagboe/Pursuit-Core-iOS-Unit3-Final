@@ -20,6 +20,9 @@ class DetailsViewController: UIViewController {
     
   @IBOutlet weak var summaryLabel: UITextView!
 
+    
+    // some of the elements are being found nil and crashing the HELP!!! CONFUSION!!!!
+    
 
     var selectedElement: Elements?
     
@@ -40,7 +43,7 @@ class DetailsViewController: UIViewController {
         weightLabel.text = "The weight of this element is \(e.density!)"
         discoveredbyLabel.text = " It was \(e.discovered_by!) that discovered this element"
       summaryLabel.text = e.summary
-        meltingPointLabel.text = "\(e.name) will melt at \(e.melt!) degrees"
+        meltingPointLabel.text = "\(e.name) will melt at \(e.melt ?? 0) degrees"
         
         elementImage.getImage(with: "http://images-of-elements.com/\(e.name.lowercased()).jpg"){
             [weak self] (result) in

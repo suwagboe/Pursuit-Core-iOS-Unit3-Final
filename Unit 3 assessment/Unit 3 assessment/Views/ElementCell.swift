@@ -13,17 +13,29 @@ class ElementCell: UITableViewCell {
     @IBOutlet weak var elementNameLabel: UILabel!
     @IBOutlet weak var elementSymbol: UILabel!// the number
     @IBOutlet weak var elementThumbnailImage: UIImageView!
-
+    
+    @IBOutlet weak var weight: UILabel!
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-     func configureCell( for element: Elements) {
+     func configureCell( for e: Elements) {
+        var newNum: Int
         
      //   elementSymbol.text = element // need to get the symbol or the number for this part
-        elementNameLabel.text = element.name
-        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\0(element.number)/s7.JPG"){
+        
+        
+        elementSymbol.text = e.symbol ?? "NA"
+        numberLabel.text = "(\(e.number.description))"
+       weight.text = e.density?.description
+        
+        elementNameLabel.text = e.name
+        
+        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/00\(e.number)/s7.JPG"){
             [weak self] (result) in
             switch result {
             case .failure:
@@ -36,11 +48,6 @@ class ElementCell: UITableViewCell {
                 }
             }
         }
-        
-       // need to use the link below for the image... //http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
-        
-        //elementSymbol.text = element.symbol
-        
     }
 
 }
