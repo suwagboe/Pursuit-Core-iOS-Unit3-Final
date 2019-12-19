@@ -86,14 +86,38 @@ struct ElementsSAPIClient {
     }
     
     
+    // get the posted favorites
+    static func getFavs(elememnts: [Elements] , completion: @escaping (Result <[Elements], AppError>) -> ()) {
+        
+        // string for the favorites
+        let favPostedstring = ""
+        
+        guard let url = URL(string: favPostedstring) else {
+            completion(.failure(.badURL(favPostedstring)))
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        
+        NetworkHelper.shared.performDataTask(with: request, completion: {
+            result in
+            switch result {
+            case .failure(let appError):
+                completion(.failure(.networkClientError(appError)))
+            case .success(let data):
+                do {
+                    
+                    let favElements = try JSONDecoder().decode([Elements].self, from: data)
+                    
+                    completion(.success(favElements))
+
+                } catch {
+                    completion(.failure(.decodingError(error)))
+                }
+            }
+        })
+    }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+    //The end of the struct
 }
