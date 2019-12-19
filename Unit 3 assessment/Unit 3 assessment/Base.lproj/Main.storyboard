@@ -100,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="discoverdby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tin-8Q-agd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="discoverdby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tin-8Q-agd">
                                 <rect key="frame" x="100" y="168.5" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -136,11 +136,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9N-fp-rm8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9N-fp-rm8">
                                 <rect key="frame" x="20" y="543" width="374" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="c1x-iI-jL4"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -153,7 +151,6 @@
                             <constraint firstItem="i15-w1-YGj" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="20" id="6LV-3s-9az"/>
                             <constraint firstItem="qrE-2q-E3a" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" id="7Kw-St-FUx"/>
                             <constraint firstItem="VZw-1u-4bh" firstAttribute="centerX" secondItem="d9S-fO-k0L" secondAttribute="centerX" id="7QS-rX-Oif"/>
-                            <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="T9N-fp-rm8" secondAttribute="trailing" constant="20" id="7zF-DY-sF2"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="P0h-hF-BkP" secondAttribute="trailing" constant="20" id="Aw1-Fo-Yat"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" id="CI3-GA-5d3"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="Tin-8Q-agd" secondAttribute="trailing" constant="100" id="Cwq-Rm-afY"/>
@@ -169,13 +166,11 @@
                             <constraint firstItem="Tin-8Q-agd" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="100" id="TPb-NZ-S1N"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="7lv-tK-7fR" secondAttribute="trailing" constant="150" id="VMP-s2-1aU"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="Tac-KH-Ees" secondAttribute="trailing" constant="100" id="Wsc-lE-hQK"/>
-                            <constraint firstItem="T9N-fp-rm8" firstAttribute="centerX" secondItem="d9S-fO-k0L" secondAttribute="centerX" id="YVJ-Lk-XzI"/>
                             <constraint firstItem="Tin-8Q-agd" firstAttribute="top" secondItem="7lv-tK-7fR" secondAttribute="bottom" constant="40" id="aib-YW-vCh"/>
                             <constraint firstItem="P0h-hF-BkP" firstAttribute="top" secondItem="oio-Si-Sje" secondAttribute="top" constant="352" id="caX-nq-apA"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="bottom" secondItem="oio-Si-Sje" secondAttribute="bottom" id="juE-e4-VEy"/>
                             <constraint firstItem="qrE-2q-E3a" firstAttribute="bottom" secondItem="oio-Si-Sje" secondAttribute="bottom" id="n7q-yF-oB2"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="top" secondItem="oio-Si-Sje" secondAttribute="top" id="oXd-EE-l11"/>
-                            <constraint firstItem="T9N-fp-rm8" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="20" id="tLA-dZ-yDz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oio-Si-Sje"/>
                     </view>
@@ -187,11 +182,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="discoveredbyLabel" destination="Tin-8Q-agd" id="zof-cu-is6"/>
                         <outlet property="elementImage" destination="Qyh-7h-zI8" id="TM6-Je-eeu"/>
                         <outlet property="elementNameLabel" destination="7lv-tK-7fR" id="13y-KK-1Ru"/>
                         <outlet property="elementNumLabel" destination="Tac-KH-Ees" id="Wja-0K-RKB"/>
                         <outlet property="elementSymbolLabel" destination="i15-w1-YGj" id="hZ9-pT-cVa"/>
                         <outlet property="meltingPointLabel" destination="VZw-1u-4bh" id="jA3-g0-YzD"/>
+                        <outlet property="summaryLabel" destination="T9N-fp-rm8" id="NKP-59-xX7"/>
                         <outlet property="weightLabel" destination="P0h-hF-BkP" id="Nac-Kz-XQ7"/>
                     </connections>
                 </viewController>

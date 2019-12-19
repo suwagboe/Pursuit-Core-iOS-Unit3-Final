@@ -15,7 +15,7 @@ struct  Elements: Codable {
     // objects that only appear in elements
     let name: String
     let symbol: String
-//    let discovered_by: String?
+    let discovered_by: String?
     let number: Int
     let summary: String?
     let melt: Double?

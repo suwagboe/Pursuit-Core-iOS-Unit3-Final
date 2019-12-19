@@ -16,7 +16,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var elementSymbolLabel: UILabel!
     @IBOutlet weak var meltingPointLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-// @IBOutlet weak var discoveredbyLabel: UILabel!
+ @IBOutlet weak var discoveredbyLabel: UILabel!
     
   @IBOutlet weak var summaryLabel: UILabel!
 
@@ -34,12 +34,12 @@ class DetailsViewController: UIViewController {
             fatalError("check the segue.. ensure it is going in the right direction")
         }
         
-        elementNameLabel.text = e.name
-        elementNumLabel.text = e.number.description
+        elementNameLabel.text = "This elements name is \(e.name)"
+        elementNumLabel.text = "The number associates with \(e.name) is \(e.number.description)"
         elementSymbolLabel.text = e.melt?.description
-        weightLabel.text = e.density?.description
-       // discoveredbyLabel.text = e.discovered_by
-      //  summaryLabel.text = e.summary
+        weightLabel.text = "The weight of this element is\(String(describing: e.density?.description))"
+        discoveredbyLabel.text = " It was \( e.discovered_by) that discovered this element"
+      summaryLabel.text = e.summary
         
         elementImage.getImage(with: "http://images-of-elements.com/\(e.name.lowercased()).jpg"){
             [weak self] (result) in

@@ -23,7 +23,19 @@ class ElementCell: UITableViewCell {
         
      //   elementSymbol.text = element // need to get the symbol or the number for this part
         elementNameLabel.text = element.name
-       // elementThumbnailImage.getImage(with: , completion: <#T##(Result<UIImage, AppError>) -> ()#>)
+        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/00\(element.number)/s7.JPG"){
+            [weak self] (result) in
+            switch result {
+            case .failure:
+                DispatchQueue.main.async {
+    self?.elementThumbnailImage.image = UIImage(systemName: "person.fill")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+    self?.elementThumbnailImage.image = image
+                }
+            }
+        }
         
        // need to use the link below for the image... //http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
         
