@@ -90,7 +90,7 @@ struct ElementsSAPIClient {
     static func getFavs(elememnts: [Elements] , completion: @escaping (Result <[Elements], AppError>) -> ()) {
         
         // string for the favorites
-        let favPostedstring = ""
+        let favPostedstring = "http://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/favorites"
         
         guard let url = URL(string: favPostedstring) else {
             completion(.failure(.badURL(favPostedstring)))

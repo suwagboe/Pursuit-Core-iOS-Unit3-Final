@@ -17,7 +17,7 @@ struct  Elements: Codable {
     let symbol: String
 //    let discovered_by: String?
     let number: Int
-    let summary: String
+    let summary: String?
     let melt: Double?
     let density: Double? // weight
     

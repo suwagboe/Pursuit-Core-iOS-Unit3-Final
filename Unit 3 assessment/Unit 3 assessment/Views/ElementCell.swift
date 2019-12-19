@@ -27,7 +27,7 @@ class ElementCell: UITableViewCell {
         
        // need to use the link below for the image... //http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
         
-        elementSymbol.text = element.symbol
+        //elementSymbol.text = element.symbol
         
     }
 

@@ -29,7 +29,17 @@ class favsViewController: UIViewController {
     
     
     func loadFavsData() {
-        
+        ElementsSAPIClient.getFavs(elememnts: allFavs, completion: {
+           [weak self] result in
+            switch result{
+            case .failure(let appError):
+                DispatchQueue.main.async {
+                  self?.showAlert(title: "OOPPPPs", message: "Something went wrong... : \(appError)")
+                }
+            case .success(let elements):
+                self?.allFavs = elements
+            }
+        })
       
         
         
