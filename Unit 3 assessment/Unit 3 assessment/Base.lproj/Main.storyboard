@@ -89,13 +89,17 @@
         <scene sceneID="nyU-TX-peH">
             <objects>
                 <viewController id="kBL-Ya-EY2" customClass="DetailsViewController" customModule="Unit_3_assessment" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d9S-fO-k0L">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="d9S-fO-k0L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-7h-zI8">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrE-2q-E3a">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="discoverdby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tin-8Q-agd">
                                 <rect key="frame" x="100" y="168.5" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -142,18 +146,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="i15-w1-YGj" firstAttribute="top" secondItem="oio-Si-Sje" secondAttribute="top" constant="352" id="3lG-YR-hie"/>
                             <constraint firstItem="Tac-KH-Ees" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="100" id="3uY-2B-h9o"/>
                             <constraint firstItem="i15-w1-YGj" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="20" id="6LV-3s-9az"/>
+                            <constraint firstItem="qrE-2q-E3a" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" id="7Kw-St-FUx"/>
                             <constraint firstItem="VZw-1u-4bh" firstAttribute="centerX" secondItem="d9S-fO-k0L" secondAttribute="centerX" id="7QS-rX-Oif"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="T9N-fp-rm8" secondAttribute="trailing" constant="20" id="7zF-DY-sF2"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="P0h-hF-BkP" secondAttribute="trailing" constant="20" id="Aw1-Fo-Yat"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" id="CI3-GA-5d3"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="Tin-8Q-agd" secondAttribute="trailing" constant="100" id="Cwq-Rm-afY"/>
+                            <constraint firstItem="qrE-2q-E3a" firstAttribute="trailing" secondItem="oio-Si-Sje" secondAttribute="trailing" id="F7i-hh-Ap9"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="trailing" secondItem="i15-w1-YGj" secondAttribute="trailing" constant="338" id="GzE-zv-mnW"/>
                             <constraint firstItem="P0h-hF-BkP" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="342" id="Hba-kp-em8"/>
+                            <constraint firstItem="qrE-2q-E3a" firstAttribute="top" secondItem="oio-Si-Sje" secondAttribute="top" id="J7N-xw-5do"/>
                             <constraint firstItem="oio-Si-Sje" firstAttribute="bottom" secondItem="VZw-1u-4bh" secondAttribute="bottom" constant="20" id="LWh-9k-bqg"/>
                             <constraint firstItem="7lv-tK-7fR" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="150" id="Ncf-xt-DW9"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="trailing" secondItem="oio-Si-Sje" secondAttribute="trailing" id="OdB-dv-k4P"/>
@@ -166,6 +173,7 @@
                             <constraint firstItem="Tin-8Q-agd" firstAttribute="top" secondItem="7lv-tK-7fR" secondAttribute="bottom" constant="40" id="aib-YW-vCh"/>
                             <constraint firstItem="P0h-hF-BkP" firstAttribute="top" secondItem="oio-Si-Sje" secondAttribute="top" constant="352" id="caX-nq-apA"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="bottom" secondItem="oio-Si-Sje" secondAttribute="bottom" id="juE-e4-VEy"/>
+                            <constraint firstItem="qrE-2q-E3a" firstAttribute="bottom" secondItem="oio-Si-Sje" secondAttribute="bottom" id="n7q-yF-oB2"/>
                             <constraint firstItem="Qyh-7h-zI8" firstAttribute="top" secondItem="oio-Si-Sje" secondAttribute="top" id="oXd-EE-l11"/>
                             <constraint firstItem="T9N-fp-rm8" firstAttribute="leading" secondItem="oio-Si-Sje" secondAttribute="leading" constant="20" id="tLA-dZ-yDz"/>
                         </constraints>
