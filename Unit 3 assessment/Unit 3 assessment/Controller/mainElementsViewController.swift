@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class mainElementsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource {
+extension mainElementsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return theElements.count
@@ -67,7 +67,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 
-extension ViewController: UITableViewDelegate {
+extension mainElementsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }

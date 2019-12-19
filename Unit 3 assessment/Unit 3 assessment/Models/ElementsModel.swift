@@ -12,15 +12,44 @@ struct  Elements: Codable {
     // top layer is an array
     // so it is an array of dictionaries
     
+    // objects that only appear in elements
     let name: String
-    let phase: String
     let symbol: String
+    let discovered_by: String
+    let number: Int
+    let summary: String
+    let melt: Double
+    let density: Double // weight
     
-    
+    // objects that only appear in favs
+    let favoritedBy: String?
 }
+
+/*
+ {
+     "id": "1",
+     "category": "metalloid",
+     "melt": 2349,
+     "boil": 4200,
+     "period": 2,
+     "symbol": "B",
+     "discovered_by": "Joseph Louis Gay-Lussac",
+     "molar_heat": 11.087,
+     "phase": "Solid",
+     "source": "https://en.wikipedia.org/wiki/Boron",
+     "summary": "Boron is a metalloid chemical element with symbol B and atomic number 5. Produced entirely by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a low-abundance element in both the Solar system and the Earth's crust. Boron is concentrated on Earth by the water-solubility of its more common naturally occurring compounds, the borate minerals.",
+     "favoritedBy": "Pascal",
+     "number": 5,
+     "appearance": "black-brown",
+     "density": 2.08,
+     "atomic_mass": 10.81,
+     "name": "Boron"
+ }
+ */
 
 
 /*
+ get elements model
  {
      "name": "Hydrogen",
      "appearance": "colorless gas",
