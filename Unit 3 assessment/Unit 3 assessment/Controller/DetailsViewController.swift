@@ -26,6 +26,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = selectedElement?.name
+        
         loadData()}
 
     func loadData() {
@@ -39,6 +40,21 @@ class DetailsViewController: UIViewController {
         weightLabel.text = e.density?.description
        // discoveredbyLabel.text = e.discovered_by
       //  summaryLabel.text = e.summary
+        
+        elementImage.getImage(with: "http://images-of-elements.com/\(e.name.lowercased()).jpg"){
+            [weak self] (result) in
+            switch result {
+            case .failure:
+                DispatchQueue.main.async {
+                    self?.elementImage.image = UIImage(systemName: "person.fill")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.elementImage.image = image
+
+                }
+            }
+        }
     }
     
     //favsButton {

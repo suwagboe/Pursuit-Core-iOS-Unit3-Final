@@ -24,6 +24,7 @@ class favsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         loadFavsData()
+        tableView.delegate = self
 
     }
     
@@ -76,4 +77,8 @@ extension favsViewController: UITableViewDataSource {
     }
     }
     
-
+extension favsViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+}
