@@ -34,7 +34,9 @@ class mainElementsViewController: UIViewController {
             [weak self] result in
             switch result {
             case .failure(let appError):
-                self?.showAlert(title: "data is currently unavailable", message: "Error: \(appError)")
+                DispatchQueue.main.async {
+                   self?.showAlert(title: "data is currently unavailable", message: "Error: \(appError)")
+                }
             case .success(let elements):
                 self?.theElements = elements
             }

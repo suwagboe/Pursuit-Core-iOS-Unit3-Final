@@ -15,14 +15,14 @@ struct  Elements: Codable {
     // objects that only appear in elements
     let name: String
     let symbol: String
-    let discovered_by: String
+//    let discovered_by: String?
     let number: Int
     let summary: String
-    let melt: Double
-    let density: Double // weight
+    let melt: Double?
+    let density: Double? // weight
     
     // objects that only appear in favs
-    let favoritedBy: String?
+    var favoritedBy: String?
 }
 
 /*
