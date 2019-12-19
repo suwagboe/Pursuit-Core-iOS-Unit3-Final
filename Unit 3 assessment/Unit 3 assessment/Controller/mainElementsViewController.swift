@@ -66,6 +66,7 @@ extension mainElementsViewController: UITableViewDataSource {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "elementCell", for: indexPath) as? ElementCell else{
             fatalError("couldnt dequeue to custom cell ")
         }
+        //elementCell
         
         // this access the specific cell that was clicked...
         let element = theElements[indexPath.row]

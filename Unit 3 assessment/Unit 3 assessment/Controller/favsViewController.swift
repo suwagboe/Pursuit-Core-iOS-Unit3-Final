@@ -22,6 +22,7 @@ class favsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
         loadFavsData()
 
     }

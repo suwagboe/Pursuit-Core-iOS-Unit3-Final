@@ -65,6 +65,8 @@ struct ElementsSAPIClient {
             // get access to the data in the url
                   var request = URLRequest(url: url)
             
+            request.httpMethod = "POST"
+            
             // the below request is from the above url request
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
@@ -74,7 +76,6 @@ struct ElementsSAPIClient {
                 switch result {
                 case .failure(let appError):
                     completion(.failure(.networkClientError(appError)))
-                    break
                 case .success:
                     completion(.success(true))
                 }

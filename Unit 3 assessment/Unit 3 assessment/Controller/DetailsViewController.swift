@@ -52,13 +52,13 @@ class DetailsViewController: UIViewController {
             [weak self]
             result in
             switch result {
-            case .failure:
+            case .failure(let appError):
             DispatchQueue.main.async {
-                self?.showAlert(title: "it did add", message: "you did something wronf please try again")
+                self?.showAlert(title: "NOPE", message: "you did something wronf please try again: \(appError)")
                 }
             case .success:
                 DispatchQueue.main.async {
-                    self?.showAlert(title: "You did it", message: "It worked this element has now been added to your favorties")}
+                    self?.showAlert(title: "IT WORKED", message: "It worked this element has now been added to your favorties")}
             }
         })
     }
