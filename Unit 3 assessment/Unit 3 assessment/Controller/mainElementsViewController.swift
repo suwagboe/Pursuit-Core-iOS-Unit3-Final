@@ -41,6 +41,16 @@ class mainElementsViewController: UIViewController {
         })
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dvc = segue.destination as? DetailsViewController, let indexPath = tableView.indexPathForSelectedRow else{
+            fatalError("could not segue properly to details controller")
+        }
+        
+        let selected = theElements[indexPath.row]
+        
+        dvc.selectedElement = selected
+        
+    }
 
 }
 

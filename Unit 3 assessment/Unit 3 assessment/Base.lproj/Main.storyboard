@@ -132,7 +132,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oio-Si-Sje"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o3Q-Xs-n0N"/>
+                    <navigationItem key="navigationItem" id="o3Q-Xs-n0N">
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="SNv-9b-gXR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="dicoveredbyLabel" destination="Tin-8Q-agd" id="GqC-Te-E0P"/>
                         <outlet property="elementImage" destination="Qyh-7h-zI8" id="TM6-Je-eeu"/>
@@ -147,21 +149,61 @@
             </objects>
             <point key="canvasLocation" x="2869.5652173913045" y="354.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Favs View Controller-->
         <scene sceneID="blr-dw-thj">
             <objects>
-                <viewController id="0cK-xv-Ew2" sceneMemberID="viewController">
+                <viewController id="0cK-xv-Ew2" customClass="favsViewController" customModule="Unit_3_assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYi-6M-E3E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wiA-Mh-T14">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="elementCell" rowHeight="222" id="bUe-Yi-zXm" customClass="ElementCell" customModule="Unit_3_assessment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bUe-Yi-zXm" id="mx6-KZ-ld7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-oc-4Xm">
+                                                    <rect key="frame" x="283" y="66" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqM-2H-MB4">
+                                                    <rect key="frame" x="20" y="0.0" width="191" height="164"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="elementNameLabel" destination="LQ3-oc-4Xm" id="qMc-n8-Vo2"/>
+                                            <outlet property="elementThumbnailImage" destination="VqM-2H-MB4" id="Mdm-w4-lMG"/>
+                                            <segue destination="kBL-Ya-EY2" kind="show" id="8Ds-Gq-UWg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wiA-Mh-T14" firstAttribute="leading" secondItem="g0i-vl-r8d" secondAttribute="leading" id="CiX-R7-uQr"/>
+                            <constraint firstItem="wiA-Mh-T14" firstAttribute="top" secondItem="eYi-6M-E3E" secondAttribute="top" id="L7h-zu-afD"/>
+                            <constraint firstItem="wiA-Mh-T14" firstAttribute="trailing" secondItem="g0i-vl-r8d" secondAttribute="trailing" id="Npv-Jq-6lD"/>
+                            <constraint firstAttribute="bottom" secondItem="wiA-Mh-T14" secondAttribute="bottom" id="q7i-oy-V05"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g0i-vl-r8d"/>
                     </view>
                     <navigationItem key="navigationItem" id="YRz-RG-M0f"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVv-sZ-wXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="723"/>
+            <point key="canvasLocation" x="1818.840579710145" y="722.54464285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z3e-2s-sqm">
@@ -181,11 +223,11 @@
             </objects>
             <point key="canvasLocation" x="-512" y="475"/>
         </scene>
-        <!--Item-->
+        <!--FAVS-->
         <scene sceneID="g7d-58-ldy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPq-qZ-BV3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fbx-SO-Vyx"/>
+                    <tabBarItem key="tabBarItem" title="FAVS" image="heart.fill" catalog="system" id="fbx-SO-Vyx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jaE-Qn-fGy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -200,11 +242,11 @@
             </objects>
             <point key="canvasLocation" x="841" y="723"/>
         </scene>
-        <!--Item-->
+        <!--Elements-->
         <scene sceneID="23s-EE-Cvb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfn-ET-SCg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Y1Z-ru-rCc"/>
+                    <tabBarItem key="tabBarItem" title="Elements" image="light.max" catalog="system" id="Y1Z-ru-rCc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Epf-3O-24U">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -220,4 +262,12 @@
             <point key="canvasLocation" x="955" y="13"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="light.max" catalog="system" width="64" height="34"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Ds-Gq-UWg"/>
+    </inferredMetricsTieBreakers>
 </document>

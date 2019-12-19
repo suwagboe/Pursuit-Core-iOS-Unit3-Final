@@ -11,7 +11,6 @@ import Foundation
 struct ElementsSAPIClient {
     
     // function to access data
-    
     static func fetchElements (completion: @escaping (Result<[Elements], AppError>) -> ()) {
         
         // the string url
@@ -48,7 +47,42 @@ struct ElementsSAPIClient {
     }
     
     
-    
+    // function to post the favorites
+    static func postFavoriteElements(element: Elements ,completion: @escaping (Result < Bool, AppError> ) ->()) {
+        
+        // String
+        let favoriteEndpointURL = "http://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/favorites"
+        
+        // convert the string into type url
+        guard let url = URL(string: favoriteEndpointURL) else {
+            completion(.failure(.badURL(favoriteEndpointURL)))
+            return
+        }
+        
+        do {
+            let data = try JSONEncoder().encode(element)
+            
+            // get access to the data in the url
+                  var request = URLRequest(url: url)
+            
+            // the below request is from the above url request
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            request.httpBody = data
+            
+            NetworkHelper.shared.performDataTask(with: request) { result in
+                switch result {
+                case .failure(let appError):
+                    completion(.failure(.networkClientError(appError)))
+                    break
+                case .success:
+                    completion(.success(true))
+                }
+            }
+        } catch {
+            completion(.failure(.encodingError(error)))
+        }
+    }
     
     
     

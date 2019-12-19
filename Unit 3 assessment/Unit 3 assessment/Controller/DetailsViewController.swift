@@ -16,16 +16,16 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var elementSymbolLabel: UILabel!
     @IBOutlet weak var meltingPointLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var dicoveredbyLabel: UILabel!
-  
+    @IBOutlet weak var discoveredbyLabel: UILabel!
+    
+  @IBOutlet weak var summaryLabel: UILabel!
+
 
     var selectedElement: Elements?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-    }
-    
+        loadData()}
 
     func loadData() {
         guard let e = selectedElement else {
@@ -33,9 +33,14 @@ class DetailsViewController: UIViewController {
         }
         
         elementNameLabel.text = e.name
-        
-        
-        
+        elementNumLabel.text = e.number.description
+        elementSymbolLabel.text = e.melt.description
+        weightLabel.text = e.density.description
+        discoveredbyLabel.text = e.discovered_by
+        summaryLabel.text = e.summary
     }
+    
+    //favsButton {
+    
 
 }
