@@ -24,18 +24,26 @@ class ElementCell: UITableViewCell {
     }
 
      func configureCell( for e: Elements) {
-        var newNum: Int
+      //  var newNum: Int
         
      //   elementSymbol.text = element // need to get the symbol or the number for this part
         
+        // Ive unwra
+        //elementSymbol.text = e.symbol
         
-        elementSymbol.text = e.symbol ?? "NA"
-        numberLabel.text = "(\(e.number.description))"
+//        if e.symbol != nil {
+//            elementSymbol.text = e.symbol
+//        } else {
+//            elementSymbol.text = "not avaiable"
+//        }
+        
+        // make sure the elements correspond between BOTH OF the CELLS!!!!
+        numberLabel.text = e.number?.description
        weight.text = e.density?.description
         
         elementNameLabel.text = e.name
         
-        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/00\(e.number)/s7.JPG"){
+        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/0\(e.number)/s7.JPG"){
             [weak self] (result) in
             switch result {
             case .failure:

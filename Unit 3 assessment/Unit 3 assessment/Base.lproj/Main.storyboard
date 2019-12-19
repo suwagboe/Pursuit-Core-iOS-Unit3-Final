@@ -239,7 +239,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-oc-4Xm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-oc-4Xm">
                                                     <rect key="frame" x="220" y="51" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -251,8 +251,20 @@
                                                         <constraint firstAttribute="width" constant="200" id="3hQ-iv-xvB"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-ts-SkK">
-                                                    <rect key="frame" x="220" y="112" width="164" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sym" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-ts-SkK">
+                                                    <rect key="frame" x="220" y="112" width="32" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqe-7C-dOA">
+                                                    <rect key="frame" x="360.5" y="112" width="33.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W50-gA-Hx1">
+                                                    <rect key="frame" x="262" y="112" width="52" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -261,18 +273,27 @@
                                             <constraints>
                                                 <constraint firstItem="LQ3-oc-4Xm" firstAttribute="top" secondItem="mx6-KZ-ld7" secondAttribute="topMargin" constant="40" id="0ET-MT-hj9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LQ3-oc-4Xm" secondAttribute="trailing" constant="10" id="AaC-dL-nsD"/>
-                                                <constraint firstItem="d4v-ts-SkK" firstAttribute="top" secondItem="LQ3-oc-4Xm" secondAttribute="bottom" constant="40" id="HXr-EL-p9c"/>
+                                                <constraint firstItem="iqe-7C-dOA" firstAttribute="trailing" secondItem="mx6-KZ-ld7" secondAttribute="trailingMargin" id="GH2-wM-JxG"/>
+                                                <constraint firstItem="W50-gA-Hx1" firstAttribute="top" secondItem="LQ3-oc-4Xm" secondAttribute="bottom" constant="40" id="IHA-KC-w3h"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="d4v-ts-SkK" secondAttribute="bottom" constant="26" id="Mg3-4F-Pfp"/>
                                                 <constraint firstItem="VqM-2H-MB4" firstAttribute="leading" secondItem="mx6-KZ-ld7" secondAttribute="leading" id="S1H-73-jN9"/>
-                                                <constraint firstItem="d4v-ts-SkK" firstAttribute="leading" secondItem="VqM-2H-MB4" secondAttribute="trailing" constant="20" id="WHG-4M-iWf"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="d4v-ts-SkK" secondAttribute="trailing" constant="10" id="b42-nP-jnk"/>
+                                                <constraint firstItem="d4v-ts-SkK" firstAttribute="top" secondItem="LQ3-oc-4Xm" secondAttribute="bottom" constant="40" id="cBp-uO-QlL"/>
                                                 <constraint firstItem="VqM-2H-MB4" firstAttribute="top" secondItem="mx6-KZ-ld7" secondAttribute="top" id="cpW-bg-6t3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="W50-gA-Hx1" secondAttribute="bottom" constant="25" id="dMA-kt-cfT"/>
+                                                <constraint firstItem="iqe-7C-dOA" firstAttribute="top" secondItem="LQ3-oc-4Xm" secondAttribute="bottom" constant="40" id="lQR-8k-TwM"/>
+                                                <constraint firstItem="d4v-ts-SkK" firstAttribute="leading" secondItem="VqM-2H-MB4" secondAttribute="trailing" constant="20" id="qLI-Rm-f8A"/>
                                                 <constraint firstItem="LQ3-oc-4Xm" firstAttribute="leading" secondItem="VqM-2H-MB4" secondAttribute="trailing" constant="20" id="tTg-Zl-IbX"/>
+                                                <constraint firstItem="W50-gA-Hx1" firstAttribute="leading" secondItem="d4v-ts-SkK" secondAttribute="trailing" constant="10" id="wNL-df-dHh"/>
                                                 <constraint firstAttribute="bottom" secondItem="VqM-2H-MB4" secondAttribute="bottom" id="xjq-gZ-87Z"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iqe-7C-dOA" secondAttribute="bottom" constant="26" id="zjt-Em-0oy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="elementNameLabel" destination="LQ3-oc-4Xm" id="qMc-n8-Vo2"/>
+                                            <outlet property="elementSymbol" destination="d4v-ts-SkK" id="bKu-ct-B3A"/>
                                             <outlet property="elementThumbnailImage" destination="VqM-2H-MB4" id="Mdm-w4-lMG"/>
+                                            <outlet property="numberLabel" destination="iqe-7C-dOA" id="HdQ-gT-xOo"/>
+                                            <outlet property="weight" destination="W50-gA-Hx1" id="X9P-4B-AYP"/>
                                             <segue destination="kBL-Ya-EY2" kind="show" id="8Ds-Gq-UWg"/>
                                         </connections>
                                     </tableViewCell>
@@ -360,6 +381,6 @@
         <image name="light.max" catalog="system" width="64" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gro-Gg-b3m"/>
+        <segue reference="8Ds-Gq-UWg"/>
     </inferredMetricsTieBreakers>
 </document>

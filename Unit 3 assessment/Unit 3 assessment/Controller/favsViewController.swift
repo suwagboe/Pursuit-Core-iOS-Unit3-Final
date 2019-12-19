@@ -38,7 +38,17 @@ class favsViewController: UIViewController {
                   self?.showAlert(title: "OOPPPPs", message: "Something went wrong... : \(appError)")
                 }
             case .success(let elements):
-                self?.allFavs = elements
+                // !!!!
+                    // need help filtering by the name so that way they all appear..
+                // right now only one appears
+                var new = [Elements]()
+                for e in elements {
+                    if e.favoritedBy?.lowercased() == "shaniya".lowercased() {
+                        new.append(e)
+                }
+                    self?.allFavs = [e]
+                }
+                
             }
         })
       
@@ -79,6 +89,6 @@ extension favsViewController: UITableViewDataSource {
     
 extension favsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 200
     }
 }
