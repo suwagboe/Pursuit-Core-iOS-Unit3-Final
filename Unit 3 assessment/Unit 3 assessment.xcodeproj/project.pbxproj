@@ -19,6 +19,8 @@
 		5527A9BC23ABD0DF00E75FD2 /* ElementsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */; };
 		5527A9BE23ABD28000E75FD2 /* ElementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9BD23ABD28000E75FD2 /* ElementsModel.swift */; };
 		5527A9C223ABD93E00E75FD2 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9C123ABD93E00E75FD2 /* ElementCell.swift */; };
+		5530D0E723ABDD2A00A277EB /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530D0E623ABDD2A00A277EB /* UIImageView+Extensions.swift */; };
+		5530D0E923ABDD7700A277EB /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530D0E823ABDD7700A277EB /* UIViewController+Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsAPIClient.swift; sourceTree = "<group>"; };
 		5527A9BD23ABD28000E75FD2 /* ElementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsModel.swift; sourceTree = "<group>"; };
 		5527A9C123ABD93E00E75FD2 /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
+		5530D0E623ABDD2A00A277EB /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		5530D0E823ABDD7700A277EB /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 		5527A9B623ABD03700E75FD2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5530D0E623ABDD2A00A277EB /* UIImageView+Extensions.swift */,
+				5530D0E823ABDD7700A277EB /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 				5527A9BC23ABD0DF00E75FD2 /* ElementsAPIClient.swift in Sources */,
 				5527A9B823ABD06B00E75FD2 /* AppError.swift in Sources */,
 				5527A9C223ABD93E00E75FD2 /* ElementCell.swift in Sources */,
+				5530D0E923ABDD7700A277EB /* UIViewController+Alerts.swift in Sources */,
+				5530D0E723ABDD2A00A277EB /* UIImageView+Extensions.swift in Sources */,
 				5527A9BE23ABD28000E75FD2 /* ElementsModel.swift in Sources */,
 				5527A9BA23ABD0A200E75FD2 /* Network Services.swift in Sources */,
 				5527A99423ABCCCC00E75FD2 /* ViewController.swift in Sources */,
