@@ -17,6 +17,7 @@
 		5527A9B823ABD06B00E75FD2 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9B723ABD06B00E75FD2 /* AppError.swift */; };
 		5527A9BA23ABD0A200E75FD2 /* Network Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9B923ABD0A200E75FD2 /* Network Services.swift */; };
 		5527A9BC23ABD0DF00E75FD2 /* ElementsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */; };
+		5527A9BE23ABD28000E75FD2 /* ElementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9BD23ABD28000E75FD2 /* ElementsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		5527A9B723ABD06B00E75FD2 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		5527A9B923ABD0A200E75FD2 /* Network Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Services.swift"; sourceTree = "<group>"; };
 		5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsAPIClient.swift; sourceTree = "<group>"; };
+		5527A9BD23ABD28000E75FD2 /* ElementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		5527A9B523ABD02800E75FD2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5527A9BD23ABD28000E75FD2 /* ElementsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				5527A9BC23ABD0DF00E75FD2 /* ElementsAPIClient.swift in Sources */,
 				5527A9B823ABD06B00E75FD2 /* AppError.swift in Sources */,
+				5527A9BE23ABD28000E75FD2 /* ElementsModel.swift in Sources */,
 				5527A9BA23ABD0A200E75FD2 /* Network Services.swift in Sources */,
 				5527A99423ABCCCC00E75FD2 /* ViewController.swift in Sources */,
 				5527A99023ABCCCC00E75FD2 /* AppDelegate.swift in Sources */,
