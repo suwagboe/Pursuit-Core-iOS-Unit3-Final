@@ -73,7 +73,6 @@ extension mainElementsViewController: UITableViewDataSource {
         
         cell.configureCell(for: element)
         
-        
         return cell 
     }
     

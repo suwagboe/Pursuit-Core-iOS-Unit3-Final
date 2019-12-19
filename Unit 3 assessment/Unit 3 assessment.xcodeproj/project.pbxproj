@@ -23,6 +23,7 @@
 		5530D0E923ABDD7700A277EB /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530D0E823ABDD7700A277EB /* UIViewController+Alerts.swift */; };
 		5530D0EB23ABE5CE00A277EB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530D0EA23ABE5CE00A277EB /* DetailsViewController.swift */; };
 		5530D0ED23ABF40D00A277EB /* favsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530D0EC23ABF40D00A277EB /* favsViewController.swift */; };
+		5530D0EF23AC34B300A277EB /* string+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530D0EE23AC34B300A277EB /* string+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5530D0E823ABDD7700A277EB /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		5530D0EA23ABE5CE00A277EB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		5530D0EC23ABF40D00A277EB /* favsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favsViewController.swift; sourceTree = "<group>"; };
+		5530D0EE23AC34B300A277EB /* string+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "string+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				5530D0E623ABDD2A00A277EB /* UIImageView+Extensions.swift */,
 				5530D0E823ABDD7700A277EB /* UIViewController+Alerts.swift */,
+				5530D0EE23AC34B300A277EB /* string+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				5527A9BA23ABD0A200E75FD2 /* Network Services.swift in Sources */,
 				5527A99423ABCCCC00E75FD2 /* mainElementsViewController.swift in Sources */,
 				5527A99023ABCCCC00E75FD2 /* AppDelegate.swift in Sources */,
+				5530D0EF23AC34B300A277EB /* string+extension.swift in Sources */,
 				5527A99223ABCCCC00E75FD2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

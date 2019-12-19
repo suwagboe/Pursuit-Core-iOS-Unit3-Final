@@ -41,14 +41,14 @@ class favsViewController: UIViewController {
                 // !!!!
                     // need help filtering by the name so that way they all appear..
                 // right now only one appears
-                var new = [Elements]()
-                for e in elements {
-                    if e.favoritedBy?.lowercased() == "shaniya".lowercased() {
-                        new.append(e)
-                }
-                    self?.allFavs = [e]
-                }
-                
+//                var new = [Elements]()
+//                for e in elements {
+//                    if e.favoritedBy?.lowercased() == "shaniya".lowercased() {
+//                        new.append(e)
+//                }
+//                    self?.allFavs = [e]
+//                }
+                self?.allFavs = elements
             }
         })
       

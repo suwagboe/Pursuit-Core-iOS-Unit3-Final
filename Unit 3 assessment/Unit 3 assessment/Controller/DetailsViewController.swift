@@ -40,8 +40,8 @@ class DetailsViewController: UIViewController {
         elementNameLabel.text = "This elements name is \(e.name)"
         elementNumLabel.text = "The number associates with \(e.name) is \(e.number?.description)"
         elementSymbolLabel.text = " \(e.name) symbol is \(e.symbol)."
-        weightLabel.text = "The weight of this element is \(e.density!)"
-        discoveredbyLabel.text = " It was \(e.discovered_by!) that discovered this element"
+        weightLabel.text = "The weight of this element is \(e.density ?? 0)"
+        discoveredbyLabel.text = " It was \(e.discovered_by ?? "Shaniya") that discovered this element"
       summaryLabel.text = e.summary
         meltingPointLabel.text = "\(e.name) will melt at \(e.melt ?? 0) degrees"
         

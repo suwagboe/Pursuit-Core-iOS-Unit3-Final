@@ -26,7 +26,7 @@ class ElementCell: UITableViewCell {
      func configureCell( for e: Elements) {
       //  var newNum: Int
         
-     //   elementSymbol.text = element // need to get the symbol or the number for this part
+        elementSymbol.text = e.symbol // need to get the symbol or the number for this part
         
         // Ive unwra
         //elementSymbol.text = e.symbol
@@ -43,7 +43,37 @@ class ElementCell: UITableViewCell {
         
         elementNameLabel.text = e.name
         
-        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/0\(e.number)/s7.JPG"){
+//        func elementNum(number: Int) -> Int{
+//            var newNum: Int
+//        for num in number {
+//            if num > 10 {
+//                newNum
+//            }
+//        }
+//        }
+        // s.leftPadding(toLength: 8, withPad: "0") // "00000123"
+
+        /*
+        s.leftPadding(toLength: 3, withPad: 0)
+         */
+        
+       // var newNum = e.number
+        
+       // let s = String(123)
+        //var e = String(e.number)
+        //e.leftPadding(toLength: 3, withPad: 0)
+        
+        //MARK: HOW DO I DO IT!!!!!
+
+         let formatter = NumberFormatter()
+         formatter.minimumIntegerDigits = 3
+        
+       // let optionalString0 = formatter.string(from: 0) // returns Optional("00")
+
+        
+        let stringe = formatter.string(from: e.number! as NSNumber) // returns "00"
+        
+        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\(stringe!)/s7.JPG"){
             [weak self] (result) in
             switch result {
             case .failure:
