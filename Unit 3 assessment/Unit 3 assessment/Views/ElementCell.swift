@@ -25,6 +25,8 @@ class ElementCell: UITableViewCell {
         elementNameLabel.text = element.name
         //elementThumbnailImage.getImage
         
+       // need to use the link below for the image... //http://www.theodoregray.com/periodictable/Tiles/{ElementIDWithThreeDigits}/s7.JPG
+        
     }
 
 }

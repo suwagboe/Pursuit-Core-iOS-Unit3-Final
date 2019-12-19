@@ -25,6 +25,24 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    // need to do a prepare for segue
+    
+    func loadData() {
+        
+        ElementsSAPIClient.fetchElements(completion: {
+            [weak self] result in
+            switch result {
+            case .failure(let appError):
+                
+                self?.showAlert(title: "data is currently unavailable", message: "Error: \(appError)")
+            case .success(let elements):
+                self?.theElements = elements
+            }
+        }
+        )
+        
+        
+    }
 
 
 }
