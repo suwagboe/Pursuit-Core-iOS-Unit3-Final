@@ -12,14 +12,14 @@ class ElementCell: UITableViewCell {
     
     @IBOutlet weak var elementNameLabel: UILabel!
     @IBOutlet weak var elementSymbol: UILabel!// the number
-    @IBOutlet weak var elementThumbnailImage: UIImage!
+    @IBOutlet weak var elementThumbnailImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func configureCell( for element: Elements) {
+     func configureCell( for element: Elements) {
         
      //   elementSymbol.text = element // need to get the symbol or the number for this part
         elementNameLabel.text = element.name
