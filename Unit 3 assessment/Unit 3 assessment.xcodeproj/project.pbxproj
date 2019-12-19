@@ -14,6 +14,9 @@
 		5527A99923ABCCCD00E75FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5527A99823ABCCCD00E75FD2 /* Assets.xcassets */; };
 		5527A99C23ABCCCD00E75FD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5527A99A23ABCCCD00E75FD2 /* LaunchScreen.storyboard */; };
 		5527A9A723ABCCCD00E75FD2 /* Unit_3_assessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9A623ABCCCD00E75FD2 /* Unit_3_assessmentTests.swift */; };
+		5527A9B823ABD06B00E75FD2 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9B723ABD06B00E75FD2 /* AppError.swift */; };
+		5527A9BA23ABD0A200E75FD2 /* Network Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9B923ABD0A200E75FD2 /* Network Services.swift */; };
+		5527A9BC23ABD0DF00E75FD2 /* ElementsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		5527A9A223ABCCCD00E75FD2 /* Unit 3 assessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit 3 assessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5527A9A623ABCCCD00E75FD2 /* Unit_3_assessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_3_assessmentTests.swift; sourceTree = "<group>"; };
 		5527A9A823ABCCCD00E75FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5527A9B723ABD06B00E75FD2 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		5527A9B923ABD0A200E75FD2 /* Network Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Services.swift"; sourceTree = "<group>"; };
+		5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +85,13 @@
 		5527A98E23ABCCCC00E75FD2 /* Unit 3 assessment */ = {
 			isa = PBXGroup;
 			children = (
-				5527A98F23ABCCCC00E75FD2 /* AppDelegate.swift */,
-				5527A99123ABCCCC00E75FD2 /* SceneDelegate.swift */,
-				5527A99323ABCCCC00E75FD2 /* ViewController.swift */,
 				5527A99523ABCCCC00E75FD2 /* Main.storyboard */,
-				5527A99823ABCCCD00E75FD2 /* Assets.xcassets */,
-				5527A99A23ABCCCD00E75FD2 /* LaunchScreen.storyboard */,
+				5527A9B323ABD00200E75FD2 /* Network Services */,
+				5527A9B623ABD03700E75FD2 /* Extensions */,
+				5527A9B523ABD02800E75FD2 /* Models */,
+				5527A9B423ABD01800E75FD2 /* Views */,
+				5527A9B223ABCFF100E75FD2 /* Controller */,
+				5527A9B123ABCF7D00E75FD2 /* supporting files */,
 				5527A99D23ABCCCD00E75FD2 /* Info.plist */,
 			);
 			path = "Unit 3 assessment";
@@ -97,6 +104,56 @@
 				5527A9A823ABCCCD00E75FD2 /* Info.plist */,
 			);
 			path = "Unit 3 assessmentTests";
+			sourceTree = "<group>";
+		};
+		5527A9B123ABCF7D00E75FD2 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				5527A98F23ABCCCC00E75FD2 /* AppDelegate.swift */,
+				5527A99123ABCCCC00E75FD2 /* SceneDelegate.swift */,
+				5527A99823ABCCCD00E75FD2 /* Assets.xcassets */,
+				5527A99A23ABCCCD00E75FD2 /* LaunchScreen.storyboard */,
+			);
+			path = "supporting files";
+			sourceTree = "<group>";
+		};
+		5527A9B223ABCFF100E75FD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5527A99323ABCCCC00E75FD2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5527A9B323ABD00200E75FD2 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				5527A9B723ABD06B00E75FD2 /* AppError.swift */,
+				5527A9B923ABD0A200E75FD2 /* Network Services.swift */,
+				5527A9BB23ABD0DF00E75FD2 /* ElementsAPIClient.swift */,
+			);
+			path = "Network Services";
+			sourceTree = "<group>";
+		};
+		5527A9B423ABD01800E75FD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5527A9B523ABD02800E75FD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5527A9B623ABD03700E75FD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5527A9BC23ABD0DF00E75FD2 /* ElementsAPIClient.swift in Sources */,
+				5527A9B823ABD06B00E75FD2 /* AppError.swift in Sources */,
+				5527A9BA23ABD0A200E75FD2 /* Network Services.swift in Sources */,
 				5527A99423ABCCCC00E75FD2 /* ViewController.swift in Sources */,
 				5527A99023ABCCCC00E75FD2 /* AppDelegate.swift in Sources */,
 				5527A99223ABCCCC00E75FD2 /* SceneDelegate.swift in Sources */,
