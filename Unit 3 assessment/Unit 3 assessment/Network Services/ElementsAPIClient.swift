@@ -37,8 +37,8 @@ struct ElementsSAPIClient {
                 // this is where the array of questions is gathered
                 do{
                     let elements = try JSONDecoder().decode([Elements].self, from: data)
+
                     completion(.success(elements))
-                    
                 } catch {
                     
                     completion(.failure(.decodingError(error)))
