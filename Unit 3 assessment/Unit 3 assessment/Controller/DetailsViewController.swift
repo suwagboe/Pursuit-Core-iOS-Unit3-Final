@@ -18,7 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
  @IBOutlet weak var discoveredbyLabel: UILabel!
     
-  @IBOutlet weak var summaryLabel: UILabel!
+  @IBOutlet weak var summaryLabel: UITextView!
 
 
     var selectedElement: Elements?
@@ -36,10 +36,11 @@ class DetailsViewController: UIViewController {
         
         elementNameLabel.text = "This elements name is \(e.name)"
         elementNumLabel.text = "The number associates with \(e.name) is \(e.number.description)"
-        elementSymbolLabel.text = e.melt?.description
-        weightLabel.text = "The weight of this element is\(String(describing: e.density?.description))"
-        discoveredbyLabel.text = " It was \( e.discovered_by) that discovered this element"
+        elementSymbolLabel.text = " \(e.name) will melt at \(e.symbol) degrees"
+        weightLabel.text = "The weight of this element is \(e.density!)"
+        discoveredbyLabel.text = " It was \(e.discovered_by!) that discovered this element"
       summaryLabel.text = e.summary
+        meltingPointLabel.text = "\(e.name) will melt at \(e.melt!) degrees"
         
         elementImage.getImage(with: "http://images-of-elements.com/\(e.name.lowercased()).jpg"){
             [weak self] (result) in

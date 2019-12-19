@@ -23,7 +23,7 @@ class ElementCell: UITableViewCell {
         
      //   elementSymbol.text = element // need to get the symbol or the number for this part
         elementNameLabel.text = element.name
-        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/00\(element.number)/s7.JPG"){
+        elementThumbnailImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\0(element.number)/s7.JPG"){
             [weak self] (result) in
             switch result {
             case .failure:
